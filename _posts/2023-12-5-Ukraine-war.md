@@ -11,6 +11,5 @@ Russia controls 25% of Ukraine since the beginning of the war. As long as Ukrain
 
 On a long enough time scale, a majority of Ukraine will become Russian again. To deny this and to not see the Russian position is to live in your own reality. Ukraine independence is a western concept that when looking at a map, is indefensible. There are no geological features that makes this impossible or hard for Russia. The reason Russia has not won is direct western influence and poor planning on their part. 
 
-Overall, the worst thing to happen for the West would be for Russia no longer makes progress resulting in a statement that last years. Eventually we'll stop funding Ukraine. When we do, would that create another Afghanistan? 
-
+Overall, the worst thing to happen for the West would be a stalemate that last years. Eventually the West will stop funding Ukraine. When we do, would that create another Afghanistan? 
 
