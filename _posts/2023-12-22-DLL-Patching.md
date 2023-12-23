@@ -2,7 +2,7 @@
 
 ### TL;DR
 
-BDF now hooks exports in x86_64 DLLs, providing a potent tool for your pen-testing arsenal. Exclusive updates and features are available for our sponsors. Get it [here](https://github.com/sponsors/secretsquirrel).
+BDF now hooks exports in x86_64 DLLs, providing a potent tool for your pen-testing arsenal. Exclusive updates and features are available for my sponsors. Get it [here](https://github.com/sponsors/secretsquirrel).
 
 
 ### Introduction
