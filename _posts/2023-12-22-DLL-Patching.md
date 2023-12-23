@@ -233,7 +233,7 @@ continue execution.
 
 ```
 
-Using the same settings as above, except for the `EXPORTS` option, we can see that the export is hooked and the payload is patched into the binary. Now, dropped this bianry in `%LOCALAPPDATA%\Microsoft\OneDrive\` and start OneDrive. You'll see a connection back to your host and port. 
+Using the same settings as above, except for the `EXPORTS` option, we can see that the export is hooked and the payload is patched into the binary. Now, place this bianry in `%LOCALAPPDATA%\Microsoft\OneDrive\` and start OneDrive. You'll see a connection back to your host and port. 
 
 
 
