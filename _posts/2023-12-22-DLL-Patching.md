@@ -15,7 +15,7 @@ Infecting a DLL provides flexibility to attackers as your modified DLL could be 
 ### How's it work?
 BDF allows you to hook DLL exports. This means that you can hook a DLL export and execute your own code. This is useful for a number of reasons, but the most common is to patch a DLL to do something it wasn't intended to do. Typically there is space before each export API to allow this.
 
-BDF places a payload loader in the text section. The payload is placed in code cave in another section. A flag is set before the payload to indicate that the payload has not been executed. When the payload is executed, the flag is set to indicate that the payload has been executed. This is useful to prevent execution of the payload more than once.
+BDF places a payload loader in the text section. The payload is placed in a code cave in another section. A flag is set before the payload to indicate that the payload has not been executed. When the payload is executed, the flag is set to indicate that the payload has been executed. This is useful to prevent execution of the payload more than once.
 
 The loader will load the payload into memory. The payload with the recovery code will execute, returning execution to the original export API. 
 
